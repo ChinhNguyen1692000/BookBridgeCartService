@@ -7,12 +7,14 @@ namespace UserService.Domain.Entities
     {
         public Guid Id { get; set; }
         public string Username { get; set; }
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
         public string Email { get; set; }
-        public string PasswordHash { get; set; }
+        public string? PasswordHash { get; set; }
         public DateTime CreatedAt { get; set; }
         // public string UserRole { get; set; }
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+        // Thuộc tính mới để đánh dấu người dùng đăng ký qua Google
+        public bool IsGoogleUser { get; set; } = false;
 
     }
 }

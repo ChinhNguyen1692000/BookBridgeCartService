@@ -1,11 +1,12 @@
 using UserService.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using UserService.Application.Interfaces;
 using UserService.Application.Services;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using UserService.Application.Configurations;
+
 // using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,16 +16,25 @@ var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("UserServiceConnection");
 builder.Services.AddDbContext<UserDbContext>(options =>
 {
-    options.UseMySql(connectionString,
-        new MySqlServerVersion(new Version(8, 0, 21)),
-        mySqlOptions => {
-            mySqlOptions.MigrationsAssembly(typeof(UserDbContext).Assembly.FullName);
-            // THÊM Retry Logic: Giúp ứng dụng đợi MySQL khi khởi động Docker
-            mySqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
-                maxRetryDelay: TimeSpan.FromSeconds(30),
-                errorNumbersToAdd: null);
-        });
+    // options.UseMySql(connectionString,
+    //     new MySqlServerVersion(new Version(8, 0, 21)),
+    //     mySqlOptions => {
+    //         mySqlOptions.MigrationsAssembly(typeof(UserDbContext).Assembly.FullName);
+    //         // THÊM Retry Logic: Giúp ứng dụng đợi MySQL khi khởi động Docker
+    //         mySqlOptions.EnableRetryOnFailure(
+    //             maxRetryCount: 5,
+    //             maxRetryDelay: TimeSpan.FromSeconds(30),
+    //             errorNumbersToAdd: null);
+    //     });
+
+    options.UseNpgsql(connectionString, npgsqlOptions =>
+    {
+        npgsqlOptions.MigrationsAssembly(typeof(UserDbContext).Assembly.FullName);
+        npgsqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 5,
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorCodesToAdd: null);
+    });
 });
 
 // 2. Services
@@ -32,6 +42,9 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.Configure<GoogleAuthSettings>(
+    builder.Configuration.GetSection("GoogleAuth"));
+
 
 
 // 3. JWT

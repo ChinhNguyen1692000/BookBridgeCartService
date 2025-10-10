@@ -97,7 +97,7 @@ namespace UserService.API.Controllers
         {
             try
             {
-                var response = await _authService.GoogleLogin(request);
+                var response = await _authService.GoogleLogin(request); 
                 return Ok(response);
             }
             catch (NotImplementedException)

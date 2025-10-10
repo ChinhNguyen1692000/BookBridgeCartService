@@ -5,8 +5,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5141
+          "Host": "userservice", 
+          "Port": 8080            
         }
       ],
       "UpstreamPathTemplate": "/gateway/auth/{everything}",

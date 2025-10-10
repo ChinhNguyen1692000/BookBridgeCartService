@@ -7,6 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Google.Apis.Auth;
+using UserService.Application.Configurations;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 
 namespace UserService.Application.Services
@@ -17,13 +21,15 @@ namespace UserService.Application.Services
         private readonly IPasswordHasher _passwordHasher;
         private readonly ITokenGenerator _tokenGenerator;
         private readonly IEmailService _emailService;
+        private readonly GoogleAuthSettings _googleAuthSettings;
 
-        public AuthService(UserDbContext context, IPasswordHasher hasher, ITokenGenerator tokenGenerator, IEmailService emailService)
+        public AuthService(UserDbContext context, IPasswordHasher hasher, ITokenGenerator tokenGenerator, IEmailService emailService, IOptions<GoogleAuthSettings> googleAuthOptions)
         {
             _context = context;
             _passwordHasher = hasher;
             _tokenGenerator = tokenGenerator;
             _emailService = emailService;
+            _googleAuthSettings = googleAuthOptions.Value;
         }
 
         public async Task<AuthResponse> Register(RegisterRequest request)
@@ -102,6 +108,9 @@ namespace UserService.Application.Services
             await _emailService.SendPasswordResetEmail(user.Email, resetToken);
         }
 
+
+
+        // This method resets the user's password using the provided token and new password.
         public async Task ResetPassword(string token, string newPassword)
         {
             var resetEntry = await _context.PasswordResetTokens
@@ -123,6 +132,7 @@ namespace UserService.Application.Services
             await _context.SaveChangesAsync();
         }
 
+        // Helper method to get roles of a user
         private async Task<List<string>> GetUserRoles(Guid userId)
         {
             return await _context.UserRoles
@@ -131,9 +141,73 @@ namespace UserService.Application.Services
                 .ToListAsync();
         }
 
-        public Task<AuthResponse> GoogleLogin(GoogleLoginRequest request)
+        public async Task<AuthResponse> GoogleLogin(GoogleLoginRequest request)
         {
-            throw new NotImplementedException("Google Login is configured but not yet implemented.");
+            // Lấy danh sách Accepted Audiences từ cấu hình
+            var acceptedAudiences = _googleAuthSettings.AcceptedAudiences;
+
+            // Xác thực token Google
+            GoogleJsonWebSignature.Payload payload;
+            try
+            {
+                var settings = new GoogleJsonWebSignature.ValidationSettings
+                {
+                    Audience = acceptedAudiences
+                };
+
+                payload = await GoogleJsonWebSignature.ValidateAsync(request.IdToken, settings);
+            }
+            catch (Exception ex)
+            {
+                throw new UnauthorizedAccessException("Invalid Google token: " + ex.Message);
+            }
+
+            // Kiểm tra user trong DB
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == payload.Email);
+
+            // Nếu chưa có, tạo user mới
+            if (user == null)
+            {
+                user = new User
+                {
+                    Id = Guid.NewGuid(),
+                    Username = payload.Name ?? payload.Email.Split('@')[0],
+                    Email = payload.Email,
+                    Phone = null,
+                    PasswordHash = String.Empty, // Không có mật khẩu
+                    CreatedAt = DateTime.UtcNow,
+                    IsGoogleUser = true // Gắn cờ
+                };
+
+                // Thêm user mới vào DB
+                _context.Users.Add(user);
+
+                // Gán role mặc định
+                var defaultRole = await _context.Roles.FirstOrDefaultAsync(r => r.RoleName == "User");
+                if (defaultRole != null)
+                {
+                    _context.UserRoles.Add(new UserRole
+                    {
+                        UserId = user.Id,
+                        RoleId = defaultRole.Id
+                    });
+                }
+
+                // Lưu thay đổi vào DB
+                await _context.SaveChangesAsync();
+            }
+            else if (user.PasswordHash != null)
+            {
+                // Nếu user đã đăng ký bằng mật khẩu, bạn có thể buộc user này
+                // phải login bằng mật khẩu hoặc liên kết tài khoản trước.
+                // throw new UnauthorizedAccessException("Account exists. Please login with password or link accounts.");
+                // Hoặc chỉ cần cho phép login.
+            }
+
+
+            // Sinh token của hệ thống
+            var roles = await GetUserRoles(user.Id);
+            return _tokenGenerator.GenerateToken(user, roles);
         }
     }
 }

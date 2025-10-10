@@ -73,9 +73,9 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
-            "Pomelo.EntityFrameworkCore.MySql": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -159,6 +159,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[8.5.4, )"
@@ -178,10 +182,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.9, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[9.0.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
@@ -319,9 +319,9 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
-            "Pomelo.EntityFrameworkCore.MySql": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
