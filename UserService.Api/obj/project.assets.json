@@ -4398,11 +4398,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
+      "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
       "projectName": "UserService.Api",
-      "projectPath": "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
+      "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
       "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-      "outputPath": "E:\\bookbridge-backend\\UserService.Api\\obj\\",
+      "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4417,8 +4417,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
-              "projectPath": "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj"
+            "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
+              "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj"
             }
           }
         }

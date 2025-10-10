@@ -4561,46 +4561,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Chinh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookService.Infracstructure\\BookService.Infracstructure.csproj",
+      "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\BookService.Infracstructure\\BookService.Infracstructure.csproj",
       "projectName": "BookService.Infracstructure",
-      "projectPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookService.Infracstructure\\BookService.Infracstructure.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookService.Infracstructure\\obj\\",
+      "projectPath": "E:\\check-merge\\bookbridge-backend\\BookService.Infracstructure\\BookService.Infracstructure.csproj",
+      "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
+      "outputPath": "E:\\check-merge\\bookbridge-backend\\BookService.Infracstructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookService.Domain\\BookService.Domain.csproj": {
-              "projectPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookService.Domain\\BookService.Domain.csproj"
+            "E:\\check-merge\\bookbridge-backend\\BookService.Domain\\BookService.Domain.csproj": {
+              "projectPath": "E:\\check-merge\\bookbridge-backend\\BookService.Domain\\BookService.Domain.csproj"
             },
-            "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookstoreService.Domain\\BookstoreService.Domain.csproj": {
-              "projectPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\BookstoreService.Domain\\BookstoreService.Domain.csproj"
+            "E:\\check-merge\\bookbridge-backend\\BookstoreService.Domain\\BookstoreService.Domain.csproj": {
+              "projectPath": "E:\\check-merge\\bookbridge-backend\\BookstoreService.Domain\\BookstoreService.Domain.csproj"
             },
-            "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\Common\\Common.csproj": {
-              "projectPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\Common\\Common.csproj"
+            "E:\\check-merge\\bookbridge-backend\\Common\\Common.csproj": {
+              "projectPath": "E:\\check-merge\\bookbridge-backend\\Common\\Common.csproj"
             }
           }
         }
@@ -4669,7 +4661,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

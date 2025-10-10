@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj": {}
+    "E:\\check-merge\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "E:\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj": {
+    "E:\\check-merge\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "E:\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj",
+        "projectPath": "E:\\check-merge\\bookbridge-backend\\ApiGateway\\ApiGateway.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\bookbridge-backend\\ApiGateway\\obj\\",
+        "outputPath": "E:\\check-merge\\bookbridge-backend\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"

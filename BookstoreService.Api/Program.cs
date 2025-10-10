@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 // DbContext
 builder.Services.AddDbContext<BookstoreDBContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("BookServiceConnection")));
 
 // AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

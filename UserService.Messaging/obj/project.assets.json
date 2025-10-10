@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\bookbridge-backend\\UserService.Messaging\\UserService.Messaging.csproj",
+      "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Messaging\\UserService.Messaging.csproj",
       "projectName": "UserService.Messaging",
-      "projectPath": "E:\\bookbridge-backend\\UserService.Messaging\\UserService.Messaging.csproj",
+      "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Messaging\\UserService.Messaging.csproj",
       "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-      "outputPath": "E:\\bookbridge-backend\\UserService.Messaging\\obj\\",
+      "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"

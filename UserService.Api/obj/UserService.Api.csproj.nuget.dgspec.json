@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj": {}
+    "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj": {}
   },
   "projects": {
-    "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj": {
+    "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
+        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
         "projectName": "UserService.Api",
-        "projectPath": "E:\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
+        "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\UserService.Api.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\bookbridge-backend\\UserService.Api\\obj\\",
+        "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
-                "projectPath": "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj"
+              "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
+                "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj"
               }
             }
           }
@@ -109,14 +109,14 @@
         }
       }
     },
-    "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
+    "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj",
+        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj",
         "projectName": "UserService.Application",
-        "projectPath": "E:\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj",
+        "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Application\\UserService.Application.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\bookbridge-backend\\UserService.Application\\obj\\",
+        "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -131,11 +131,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
-                "projectPath": "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj"
+              "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
+                "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj"
               },
-              "E:\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj": {
-                "projectPath": "E:\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj"
+              "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj": {
+                "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj"
               }
             }
           }
@@ -208,14 +208,14 @@
         }
       }
     },
-    "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
+    "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj",
+        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj",
         "projectName": "UserService.Domain",
-        "projectPath": "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj",
+        "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\bookbridge-backend\\UserService.Domain\\obj\\",
+        "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -266,14 +266,14 @@
         }
       }
     },
-    "E:\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj": {
+    "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj",
+        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj",
         "projectName": "UserService.Infrastructure",
-        "projectPath": "E:\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj",
+        "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\UserService.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\bookbridge-backend\\UserService.Infrastructure\\obj\\",
+        "outputPath": "E:\\check-merge\\bookbridge-backend\\UserService.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -288,8 +288,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
-                "projectPath": "E:\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj"
+              "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj": {
+                "projectPath": "E:\\check-merge\\bookbridge-backend\\UserService.Domain\\UserService.Domain.csproj"
               }
             }
           }

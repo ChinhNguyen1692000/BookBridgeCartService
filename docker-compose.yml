@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   # 1. PostgreSQL
   db:
@@ -6,13 +8,12 @@ services:
     environment:
       POSTGRES_USER: bookbridge_userservice
       POSTGRES_PASSWORD: 12345
-      POSTGRES_DB: user_service
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "bookbridge_userservice", "-d", "user_service"]
+      test: ["CMD", "pg_isready", "-U", "bookbridge_userservice"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -33,7 +34,55 @@ services:
       db:
         condition: service_healthy
 
-  # 3. API Gateway
+  # 3. BookService
+  bookservice:
+    build:
+      context: .
+      dockerfile: BookService.Api/Dockerfile
+    container_name: bookbridge_bookservice
+    environment:
+      ConnectionStrings__BookServiceConnection: Host=db;Port=5432;Database=book_service;Username=bookbridge_userservice;Password=12345;
+      Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5142:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # 4. BookStoreService
+  bookstoreservice:
+    build:
+      context: .
+      dockerfile: BookStoreService.Api/Dockerfile
+    container_name: bookbridge_bookstoreservice
+    environment:
+      ConnectionStrings__BookStoreServiceConnection: Host=db;Port=5432;Database=bookstore_service;Username=bookbridge_userservice;Password=12345;
+      Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5143:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # 5. OrderService
+  orderservice:
+    build:
+      context: .
+      dockerfile: OrderService.Api/Dockerfile
+    container_name: bookbridge_orderservice
+    environment:
+      ConnectionStrings__OrderServiceConnection: Host=db;Port=5432;Database=order_service;Username=bookbridge_userservice;Password=12345;
+      Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5144:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # 6. API Gateway
   gateway:
     build:
       context: .
@@ -43,8 +92,11 @@ services:
       - "5139:8080"
     depends_on:
       - userservice
+      - bookservice
+      - bookstoreservice
+      - orderservice
 
-  # 4. pgAdmin
+  # 7. pgAdmin
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin_bookbridge
@@ -54,7 +106,7 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - pgadmin_data:/var/lib/pgadmin  # Lưu lại cấu hình pgAdmi
+      - pgadmin_data:/var/lib/pgadmin
     depends_on:
       - db
 
