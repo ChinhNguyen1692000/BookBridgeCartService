@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UserService.Infrastructure
-build_property.ProjectDir = E:\bookbridge-backend\UserService.Infrastructure\
+build_property.ProjectDir = E:\check-merge\bookbridge-backend\UserService.Infrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

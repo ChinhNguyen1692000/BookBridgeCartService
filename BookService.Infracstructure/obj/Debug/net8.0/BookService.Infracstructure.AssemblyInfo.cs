@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookService.Infracstructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caaf129c7ae2166f45f6ed6b6db79f52cf259d04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cffa8bd44bf473393aeb033cefadaefdb6dad68")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookService.Infracstructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookService.Infracstructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
