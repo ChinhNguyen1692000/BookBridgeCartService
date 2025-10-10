@@ -1,0 +1,12 @@
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\bin\Debug\net8.0\BookService.Domain.deps.json
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\bin\Debug\net8.0\BookService.Domain.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\bin\Debug\net8.0\BookService.Domain.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.AssemblyInfoInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.AssemblyInfo.cs
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.csproj.CoreCompileInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.sourcelink.json
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\refint\BookService.Domain.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\BookService.Domain.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Domain\obj\Debug\net8.0\ref\BookService.Domain.dll

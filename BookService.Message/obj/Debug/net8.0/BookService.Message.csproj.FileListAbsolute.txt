@@ -1,0 +1,12 @@
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\bin\Debug\net8.0\BookService.Message.deps.json
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\bin\Debug\net8.0\BookService.Message.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\bin\Debug\net8.0\BookService.Message.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.GeneratedMSBuildEditorConfig.editorconfig
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.AssemblyInfoInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.AssemblyInfo.cs
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.csproj.CoreCompileInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.sourcelink.json
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\refint\BookService.Message.dll
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\BookService.Message.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge\bookbridge\BookService.Message\obj\Debug\net8.0\ref\BookService.Message.dll
