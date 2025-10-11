@@ -23,7 +23,7 @@ services:
   userservice:
     build:
       context: .
-      dockerfile: UserService.Api/Dockerfile
+      dockerfile: src/Services/UserService/UserService.Api/Dockerfile
     container_name: bookbridge_userservice
     environment:
       ConnectionStrings__UserServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
@@ -39,7 +39,7 @@ services:
   bookservice:
     build:
       context: .
-      dockerfile: BookService.Api/Dockerfile
+      dockerfile: src/Services/BookService/BookService.Api/Dockerfile
     container_name: bookbridge_bookservice
     environment:
       ConnectionStrings__BookServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
@@ -55,7 +55,7 @@ services:
   bookstoreservice:
     build:
       context: .
-      dockerfile: BookStoreService.Api/Dockerfile
+      dockerfile: src/Services/BookStoreService/BookStoreService.Api/Dockerfile
     container_name: bookbridge_bookstoreservice
     environment:
       ConnectionStrings__BookStoreServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
@@ -71,7 +71,7 @@ services:
   orderservice:
     build:
       context: .
-      dockerfile: OrderService.Api/Dockerfile
+      dockerfile: /src/Services/OrderService/OrderService.Api/Dockerfile
     container_name: bookbridge_orderservice
     environment:
       ConnectionStrings__OrderServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
@@ -87,7 +87,7 @@ services:
   gateway:
     build:
       context: .
-      dockerfile: ApiGateway/Dockerfile
+      dockerfile: src/ApiGateway/Dockerfile
     container_name: bookbridge_gateway
     ports:
       - "5139:8080"
