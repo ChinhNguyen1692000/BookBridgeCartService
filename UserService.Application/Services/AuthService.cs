@@ -11,6 +11,7 @@ using Google.Apis.Auth;
 using UserService.Application.Configurations;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Common.Paging;
 
 
 namespace UserService.Application.Services
@@ -32,6 +33,20 @@ namespace UserService.Application.Services
             _googleAuthSettings = googleAuthOptions.Value;
         }
 
+        // Get all users with pagination
+        public async Task<PagedResult<User>> GetAllAsync(int pageNo, int pageSize)
+        {
+            var users = await _context.Users.ToListAsync();
+            return PagedResult<User>.Create(users, pageNo, pageSize);
+        }
+
+        // Get user by ID
+        public async Task<User> GetByIdAsync(Guid userId)
+        {
+            return await _context.Users.FindAsync(userId);
+        }
+
+        // This method handles user registration by validating input, checking for existing users, hashing the password, creating a new user, assigning a default role, and returning a JWT token.
         public async Task<AuthResponse> Register(RegisterRequest request)
         {
             if (request.Password != request.Repassword)
@@ -71,8 +86,41 @@ namespace UserService.Application.Services
             return _tokenGenerator.GenerateToken(user, roles);
         }
 
+
+        // Kích hoạt tài khoản qua email
+        public async Task<(bool Success, string Message)> ActiveEmailAccount(string otp)
+        {
+
+            // Validate input
+            if (string.IsNullOrWhiteSpace(otp) || otp.Length > 10)
+                return (false, "Invalid OTP format.");
+
+            // Find OTP record    
+            var userOtp = await _context.UserOtps
+                .Include(u => u.User)
+                .FirstOrDefaultAsync(u => u.OtpCode == otp && u.Type == OtpType.Activation && !u.IsUsed);
+
+            if (userOtp == null)
+                return (false, "OTP does not exist.");
+            if (userOtp.IsUsed)
+                return (false, "OTP has already been used.");
+            if (userOtp.Expiry < DateTime.UtcNow)
+                return (false, "OTP has expired.");
+
+            // Activate user account
+            userOtp.IsUsed = true;
+            userOtp.User.IsActive = true;
+
+            await _context.SaveChangesAsync();
+            return (true, "Account activated successfully.");
+        }
+
+        // This method handles user login by validating credentials and generating a JWT token.
         public async Task<AuthResponse> Login(LoginRequest request)
         {
+            if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Password))
+                throw new ArgumentException("Email and password are required.");
+
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == request.Email);
             if (user == null)
                 throw new UnauthorizedAccessException("Invalid credentials.");
@@ -85,6 +133,7 @@ namespace UserService.Application.Services
             return _tokenGenerator.GenerateToken(user, roles);
         }
 
+        // This method initiates the password reset process by generating a reset token and sending it via email.
         public async Task ForgetPassword(string email)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
@@ -141,6 +190,7 @@ namespace UserService.Application.Services
                 .ToListAsync();
         }
 
+        // This method handles Google login by validating the Google token, checking/creating the user in the database, and generating a JWT token.
         public async Task<AuthResponse> GoogleLogin(GoogleLoginRequest request)
         {
             // Lấy danh sách Accepted Audiences từ cấu hình
@@ -174,9 +224,10 @@ namespace UserService.Application.Services
                     Username = payload.Name ?? payload.Email.Split('@')[0],
                     Email = payload.Email,
                     Phone = null,
-                    PasswordHash = String.Empty, // Không có mật khẩu
+                    PasswordHash = null, // Không có mật khẩu
                     CreatedAt = DateTime.UtcNow,
-                    IsGoogleUser = true // Gắn cờ
+                    IsGoogleUser = true, // Gắn cờ
+                    IsActive = false
                 };
 
                 // Thêm user mới vào DB
@@ -196,18 +247,69 @@ namespace UserService.Application.Services
                 // Lưu thay đổi vào DB
                 await _context.SaveChangesAsync();
             }
-            else if (user.PasswordHash != null)
+            else
             {
-                // Nếu user đã đăng ký bằng mật khẩu, bạn có thể buộc user này
-                // phải login bằng mật khẩu hoặc liên kết tài khoản trước.
-                // throw new UnauthorizedAccessException("Account exists. Please login with password or link accounts.");
-                // Hoặc chỉ cần cho phép login.
+                // 4️ Nếu user đã tồn tại
+                if (!user.IsGoogleUser)
+                {
+                    // User trước đó đăng ký bằng mật khẩu
+                    // Option 1: buộc liên kết account trước khi login bằng Google
+                    // throw new UnauthorizedAccessException("Account exists. Please login with password or link accounts.");
+
+                    // Option 2: cho phép login, đánh dấu account này hỗ trợ Google
+                    user.IsGoogleUser = true;
+                    await _context.SaveChangesAsync();
+                }
+
+                if (!user.IsActive)
+                {
+                    user.IsActive = true; // kích hoạt account nếu trước đó chưa active
+                    await _context.SaveChangesAsync();
+                }
             }
-
-
             // Sinh token của hệ thống
             var roles = await GetUserRoles(user.Id);
             return _tokenGenerator.GenerateToken(user, roles);
+        }
+
+        // Cập nhật username và phone number
+        public async Task<string> UpdateUserNameAndPhoneNumberAsync(Guid userId, UpdateUserRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Username))
+                throw new ArgumentException("Username không được để trống.");
+
+            if (request.Phone != null && request.Phone.Length > 20)
+                throw new ArgumentException("Phone quá dài.");
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+                throw new Exception("User không tồn tại");
+
+            user.Username = request.Username;
+            user.Phone = request.Phone;
+
+            await _context.SaveChangesAsync();
+
+            return "User info updated successfully.";
+        }
+
+
+        public async Task<string> UpdateUserPasswordAsync(Guid userId, UpdateUserPasswordRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Password))
+                throw new ArgumentException("Password không được để trống.");
+
+            if (request.Password != request.Repassword)
+                throw new ArgumentException("Password và Repassword không khớp.");
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+                throw new Exception("User không tồn tại");
+
+            user.PasswordHash = _passwordHasher.HashPassword(request.Password);
+            await _context.SaveChangesAsync();
+
+            return "Password updated successfully.";
         }
     }
 }

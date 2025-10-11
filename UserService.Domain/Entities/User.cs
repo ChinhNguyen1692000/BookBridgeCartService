@@ -15,6 +15,11 @@ namespace UserService.Domain.Entities
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
         // Thuộc tính mới để đánh dấu người dùng đăng ký qua Google
         public bool IsGoogleUser { get; set; } = false;
+        // Thuộc tính mới để đánh dấu người dùng có kích hoạt hay không
+        public bool IsActive { get; set; } = false;
+        // Navigation property cho UserOtp
+        public ICollection<UserOtp> UserOtps { get; set; } = new List<UserOtp>();
+
 
     }
 }

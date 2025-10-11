@@ -3,6 +3,8 @@ using UserService.Application.Interfaces;
 using UserService.Application.Models;
 using System.Threading.Tasks;
 using System;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace UserService.API.Controllers
 {
@@ -15,6 +17,27 @@ namespace UserService.API.Controllers
         public AuthController(IAuthService authService)
         {
             _authService = authService;
+        }
+
+
+        // GET: api/Auth
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        public async Task<IActionResult> GetAllUser([FromQuery] int pageNo, [FromQuery] int pageSize)
+        {
+            var list = await _authService.GetAllAsync(pageNo, pageSize);
+            return Ok(list);
+        }
+
+
+        // GET: api/Auth/{id}
+        [Authorize(Roles = "Admin")]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUserById(Guid id)
+        {
+            var user = await _authService.GetByIdAsync(id);
+            if (user == null) return NotFound();
+            return Ok(user);
         }
 
         // POST: api/Auth/register
@@ -33,6 +56,17 @@ namespace UserService.API.Controllers
             }
         }
 
+        // POST: api/Auth/active-email
+        [HttpPost("active-email")]
+        public async Task<IActionResult> ActiveEmailAccount([FromBody] string otp)
+        {
+            var (success, message) = await _authService.ActiveEmailAccount(otp);
+            if (!success)
+                return BadRequest(new { message });
+            return Ok(new { message });
+        }
+
+
         // POST: api/Auth/login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
@@ -47,9 +81,49 @@ namespace UserService.API.Controllers
                 return Unauthorized(new { message = "Email or password is incorrect." });
             }
         }
-        
-        // **TODO: Thêm ForgetPassword (Saga Pattern)**
-        // **TODO: Thêm Google Login**
+
+        // PUT: api/Auth/update-user-info
+        [Authorize]
+        [HttpPut("update-user-info")]
+        public async Task<IActionResult> UpdateUserNameAndPhoneNumber([FromBody] UpdateUserRequest request)
+        {
+            try
+            {
+                var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var message = await _authService.UpdateUserNameAndPhoneNumberAsync(userId, request);
+                return Ok(new { message });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
+        // PUT: api/Auth/update-user-password
+        [Authorize]
+        [HttpPut("update-user-password")]
+        public async Task<IActionResult> UpdateUserPassword([FromBody] UpdateUserPasswordRequest request)
+        {
+            try
+            {
+                var userId = Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var message = await _authService.UpdateUserPasswordAsync(userId, request);
+                return Ok(new { message });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
 
 
 
@@ -90,14 +164,14 @@ namespace UserService.API.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-        
-                // POST: api/Auth/google-login
+
+        // POST: api/Auth/google-login
         [HttpPost("google-login")]
         public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginRequest request)
         {
             try
             {
-                var response = await _authService.GoogleLogin(request); 
+                var response = await _authService.GoogleLogin(request);
                 return Ok(response);
             }
             catch (NotImplementedException)

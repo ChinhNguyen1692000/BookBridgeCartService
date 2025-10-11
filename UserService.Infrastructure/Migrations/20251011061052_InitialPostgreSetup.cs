@@ -47,9 +47,10 @@ namespace UserService.Infrastructure.Migrations
                     Username = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     Email = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    PasswordHash = table.Column<string>(type: "text", nullable: false),
+                    PasswordHash = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IsGoogleUser = table.Column<bool>(type: "boolean", nullable: false)
+                    IsGoogleUser = table.Column<bool>(type: "boolean", nullable: false),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,6 +73,35 @@ namespace UserService.Infrastructure.Migrations
                     table.ForeignKey(
                         name: "FK_PasswordResetTokens_Users_UserId",
                         column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserOtps",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
+                    UserId1 = table.Column<Guid>(type: "uuid", nullable: false),
+                    OtpCode = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: false),
+                    Expiry = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    IsUsed = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserOtps", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserOtps_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserOtps_Users_UserId1",
+                        column: x => x.UserId1,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -123,6 +153,16 @@ namespace UserService.Infrastructure.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_UserOtps_UserId",
+                table: "UserOtps",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserOtps_UserId1",
+                table: "UserOtps",
+                column: "UserId1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
                 table: "UserRoles",
                 column: "RoleId");
@@ -136,6 +176,9 @@ namespace UserService.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "UserCreatedEvents");
+
+            migrationBuilder.DropTable(
+                name: "UserOtps");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");

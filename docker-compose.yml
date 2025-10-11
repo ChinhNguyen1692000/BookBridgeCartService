@@ -8,12 +8,13 @@ services:
     environment:
       POSTGRES_USER: bookbridge_userservice
       POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: bookbridge_db
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "bookbridge_userservice"]
+      test: ["CMD", "pg_isready", "-U", "bookbridge_userservice", "-d", "bookbridge_db"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -25,7 +26,7 @@ services:
       dockerfile: UserService.Api/Dockerfile
     container_name: bookbridge_userservice
     environment:
-      ConnectionStrings__UserServiceConnection: Host=db;Port=5432;Database=user_service;Username=bookbridge_userservice;Password=12345;
+      ConnectionStrings__UserServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
       Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
       ASPNETCORE_ENVIRONMENT: Development
     ports:
@@ -41,7 +42,7 @@ services:
       dockerfile: BookService.Api/Dockerfile
     container_name: bookbridge_bookservice
     environment:
-      ConnectionStrings__BookServiceConnection: Host=db;Port=5432;Database=book_service;Username=bookbridge_userservice;Password=12345;
+      ConnectionStrings__BookServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
       Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
       ASPNETCORE_ENVIRONMENT: Development
     ports:
@@ -57,7 +58,7 @@ services:
       dockerfile: BookStoreService.Api/Dockerfile
     container_name: bookbridge_bookstoreservice
     environment:
-      ConnectionStrings__BookStoreServiceConnection: Host=db;Port=5432;Database=bookstore_service;Username=bookbridge_userservice;Password=12345;
+      ConnectionStrings__BookStoreServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
       Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
       ASPNETCORE_ENVIRONMENT: Development
     ports:
@@ -73,7 +74,7 @@ services:
       dockerfile: OrderService.Api/Dockerfile
     container_name: bookbridge_orderservice
     environment:
-      ConnectionStrings__OrderServiceConnection: Host=db;Port=5432;Database=order_service;Username=bookbridge_userservice;Password=12345;
+      ConnectionStrings__OrderServiceConnection: Host=db;Port=5432;Database=bookbridge_db;Username=bookbridge_userservice;Password=12345;
       Jwt__Key: BookbridgeJWTKey_2025_Secure_ABC123!
       ASPNETCORE_ENVIRONMENT: Development
     ports:

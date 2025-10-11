@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using UserService.Application.Configurations;
+using UserService.Domain.Entities;
 
 // using MassTransit;
 
@@ -66,7 +67,8 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = jwtIssuer,
         ValidAudience = jwtAudience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+        IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
 
@@ -80,32 +82,55 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Tự động áp dụng migrations VÀ XỬ LÝ LỖI
-// using (var scope = app.Services.CreateScope())
-// {
-//     var services = scope.ServiceProvider;
-//     try
-//     {
-//         Console.WriteLine("--> Starting database migration...");
-//         var context = services.GetRequiredService<UserDbContext>();
-//         context.Database.Migrate(); // Lệnh này áp dụng tất cả các migration còn thiếu
-//         Console.WriteLine("--> Database migration applied successfully. Tables are ready.");
-//     }
-//     catch (Exception ex)
-//     {
-//         // Ghi log lỗi nếu migration thất bại
-//         var logger = services.GetRequiredService<ILogger<Program>>();
-//         logger.LogError(ex, "An error occurred during database migration.");
-//     }
-// }
+
 // Tự động áp dụng migrations VÀ XỬ LÝ LỖI - Cách 2
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider; // <-- chỉ tồn tại trong scope này
     try
     {
+        // Lấy DbContext đã đăng ký
         var context = services.GetRequiredService<UserDbContext>();
+
+        // Tự động áp dụng migration
         context.Database.Migrate();
+
+
+        // ----- Seed Admin Account -----
+        if (!context.Users.Any(u => u.Username == "admin"))
+        {
+            var passwordHasher = services.GetRequiredService<IPasswordHasher>();
+
+            // Tạo admin user mới
+            var adminUser = new User
+            {
+                Id = Guid.NewGuid(),
+                Username = "admin",
+                Email = "admin@example.com",
+                PasswordHash = passwordHasher.HashPassword("Admin@123"),
+                IsActive = true,
+                IsGoogleUser = false,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            // Thêm admin user vào database
+            context.Users.Add(adminUser);
+
+            // Gán role Admin (role đã seed sẵn trong OnModelCreating)
+            var adminRole = context.Roles.FirstOrDefault(r => r.RoleName == "Admin");
+            if (adminRole != null)
+            {   
+                context.UserRoles.Add(new UserRole
+                {
+                    UserId = adminUser.Id,
+                    RoleId = adminRole.Id
+                });
+            }
+            context.SaveChanges();
+            // Seed Admin Account xong -------
+            Console.WriteLine("Admin account created.");
+        }
+        // -------------------------------
         Console.WriteLine("Database migration applied successfully.");
     }
     catch (Exception ex)

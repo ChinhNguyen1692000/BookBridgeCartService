@@ -14,6 +14,7 @@ namespace UserService.Infrastructure.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<UserOtp> UserOtps { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
         public DbSet<UserCreatedEvent> UserCreatedEvents { get; set; } // Optional
 
@@ -27,7 +28,7 @@ namespace UserService.Infrastructure.Data
                 entity.HasKey(u => u.Id);
                 entity.Property(u => u.Username).IsRequired().HasMaxLength(100);
                 entity.Property(u => u.Email).IsRequired().HasMaxLength(200);
-                entity.Property(u => u.PasswordHash).IsRequired();
+                entity.Property(u => u.PasswordHash).HasMaxLength(200);
                 entity.Property(u => u.Phone).HasMaxLength(20);
                 entity.Property(u => u.CreatedAt).IsRequired();
             });
@@ -36,7 +37,7 @@ namespace UserService.Infrastructure.Data
             modelBuilder.Entity<Role>(entity =>
             {
                 entity.HasKey(r => r.Id);
-                entity.Property(r => r.RoleName).IsRequired().HasMaxLength(50); // ✅ Thêm dòng này
+                entity.Property(r => r.RoleName).IsRequired().HasMaxLength(50); // Thêm dòng này
                 entity.HasMany(r => r.UserRoles)
                       .WithOne(ur => ur.Role)
                       .HasForeignKey(ur => ur.RoleId);
@@ -54,6 +55,21 @@ namespace UserService.Infrastructure.Data
                 entity.HasOne(ur => ur.Role)
                       .WithMany(r => r.UserRoles)
                       .HasForeignKey(ur => ur.RoleId);
+            });
+
+            // UserOtp
+            modelBuilder.Entity<UserOtp>(entity =>
+            {
+                entity.HasKey(o => o.Id);
+                entity.Property(o => o.UserId).IsRequired();
+                entity.Property(o => o.OtpCode).IsRequired().HasMaxLength(10);
+                entity.Property(o => o.Expiry).IsRequired();
+                entity.Property(o => o.Type).IsRequired();
+                entity.Property(o => o.IsUsed).IsRequired().HasDefaultValue(false);
+                entity.HasOne<User>()
+                     .WithMany(u => u.UserOtps)
+                     .HasForeignKey(o => o.UserId)
+                     .OnDelete(DeleteBehavior.Cascade);  
             });
 
             // PasswordResetToken
