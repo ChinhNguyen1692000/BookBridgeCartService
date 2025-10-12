@@ -28,6 +28,7 @@ namespace BookService.Domain.Entities
 
         [MaxLength(255)]
         public string? Translator { get; set; }
+        public int Quantity { get; set; }
 
         [MaxLength(255)]
         public string Publisher { get; set; }

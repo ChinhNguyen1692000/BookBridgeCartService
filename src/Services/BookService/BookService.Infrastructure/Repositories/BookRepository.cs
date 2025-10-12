@@ -14,6 +14,33 @@ namespace BookService.Infracstructure.Repositories
     public class BookRepository : BaseRepository<Book, int>
     {
         public BookRepository(BookDBContext context) : base(context) { }
+        public async Task<bool> BuyBook(int id, int quantity)
+        {
+            var entity = await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
+            if (entity == null)
+            {
+                return false;
+            }
+            if (entity.Quantity < quantity)
+            {
+                return false;
+            }
+            entity.Quantity -= quantity;
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        public async Task<bool> RefundBook(int id, int quantity)
+        {
+            var entity = await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
+            if (entity == null)
+            {
+                return false;
+            }
+            entity.Quantity += quantity;
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
         public async Task<bool> Remove(int id)
         {
             var entity = await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
@@ -56,7 +83,7 @@ namespace BookService.Infracstructure.Repositories
             var bL = _dbSet.Include(b => b.BookType).Where(b => b.IsActive).AsQueryable();
             if (!searchValue.IsNullOrEmpty())
             {
-                bL =  bL.Where(b => b.Title.ToLower().Contains(searchValue.ToLower()) || b.Author.ToLower().Contains(searchValue.ToLower()));
+                bL = bL.Where(b => b.Title.ToLower().Contains(searchValue.ToLower()) || b.Author.ToLower().Contains(searchValue.ToLower()));
             }
             return await bL.ToListAsync();
         }

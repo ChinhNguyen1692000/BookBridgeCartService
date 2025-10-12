@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "E:\\check-merge\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj": {}
+    "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "E:\\check-merge\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj": {
+    "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\check-merge\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj",
+        "projectUniqueName": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "E:\\check-merge\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj",
-        "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\check-merge\\bookbridge-backend\\src\\ApiGateway\\obj\\",
+        "projectPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\ApiGateway\\ApiGateway.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

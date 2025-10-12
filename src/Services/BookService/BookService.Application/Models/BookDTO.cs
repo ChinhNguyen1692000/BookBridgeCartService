@@ -17,6 +17,8 @@ namespace BookService.Application.Models
         public string Title { get; set; }
         public string Author { get; set; }
         public string? Translator { get; set; }
+        public int Quantity { get; set; }
+
         public string Publisher { get; set; }
         public DateTime? PublishedDate { get; set; }
         public string Language { get; set; }
@@ -38,6 +40,8 @@ namespace BookService.Application.Models
         public string Title { get; set; }
         public string Author { get; set; }
         public string? Translator { get; set; }
+        public int Quantity { get; set; }
+
         public string Publisher { get; set; }
         public DateTime? PublishedDate { get; set; }
         public decimal Price { get; set; }
@@ -55,6 +59,8 @@ namespace BookService.Application.Models
         public string Title { get; set; }
         public string Author { get; set; }
         public string? Translator { get; set; }
+        public int Quantity { get; set; }
+
         public decimal Price { get; set; }
         public string Publisher { get; set; }
         public DateTime? PublishedDate { get; set; }
@@ -63,5 +69,15 @@ namespace BookService.Application.Models
         public int? PageCount { get; set; }
         public int TypeId { get; set; }
         public string ImageUrl { get; set; }
+    }
+    public class BookBuyRequest
+    {
+        public int Id { get; set; }
+        public int Quantity { get; set; }
+    }
+    public class BookRefundRequest
+    {
+        public int Id { get; set; }
+        public int Quantity { get; set; }
     }
 }

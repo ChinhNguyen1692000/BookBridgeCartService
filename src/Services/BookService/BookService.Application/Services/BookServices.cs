@@ -20,6 +20,16 @@ namespace BookService.Application.Services
             _repo = repo;
             _mapper = mapper;
         }
+        public async Task<bool> BuyBook(BookBuyRequest request)
+        {
+            return await _repo.BuyBook(request.Id, request.Quantity);
+        }
+        public async Task<bool> RefundBook(BookRefundRequest request)
+        {
+            return await _repo.RefundBook(request.Id, request.Quantity);
+        }
+
+
         public async Task<PagedResult<Book>> Search(string? searchValue, int pageNo = 1, int pageSize = 10)
         {
             var bL = await _repo.SearchByTitleOrAuthor(searchValue);

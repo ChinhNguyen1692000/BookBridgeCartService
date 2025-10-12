@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9OYWJF1dJQ8=",
+  "dgSpecHash": "exd4f/QmUhw=",
   "success": true,
-  "projectFilePath": "E:\\check-merge\\bookbridge-backend\\src\\Services\\UserService\\UserService.Domain\\UserService.Domain.csproj",
+  "projectFilePath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\UserService\\UserService.Domain\\UserService.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
