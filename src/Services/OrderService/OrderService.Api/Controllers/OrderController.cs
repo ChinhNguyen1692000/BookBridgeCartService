@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
 using OrderService.Application.Interface;
 using OrderService.Application.Models;
 using System.Threading.Tasks;
@@ -65,5 +66,39 @@ namespace OrderService.Api.Controllers
             var result = await _service.Cancle(id);
             return Ok(result);
         }
+
+        //----------------------------REDIS
+        //[HttpPost("from-cart/{customerId}")]
+        //public async Task<IActionResult> CreateFromCart(string customerId, [FromServices] CartService cartService)
+        //{
+        //    // 1️⃣ Lấy cart từ Redis
+        //    var cart = await cartService.GetCartAsync(customerId);
+        //    if (cart == null || !cart.Items.Any())
+        //        return BadRequest("Cart is empty");
+
+        //    // 2️⃣ Chuyển Cart → OrderCreateRequest
+        //    var orderRequest = new OrderCreateRequest
+        //    {
+        //        CustomerId = customerId,
+        //        ShippingAddress = "Default Address", // hoặc nhận từ FE
+        //        TotalAmount = cart.TotalAmount,
+        //        OrderItems = cart.Items.Select(i => new OrderItemCreateRequest
+        //        {
+        //            BookId = i.BookId,
+        //            Quantity = i.Quantity,
+        //            UnitPrice = i.UnitPrice,
+        //            TotalPrice = i.TotalPrice
+        //        }).ToList()
+        //    };
+
+        //    // 3️⃣ Gọi service tạo order
+        //    var order = await _service.Create(orderRequest);
+
+        //    // 4️⃣ Xóa giỏ hàng sau khi đặt
+        //    await cartService.ClearCartAsync(customerId);
+
+        //    return Ok(order);
+        //}
+
     }
 }

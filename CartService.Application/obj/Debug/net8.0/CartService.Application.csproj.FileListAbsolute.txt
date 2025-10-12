@@ -1,0 +1,13 @@
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\bin\Debug\net8.0\CartService.Application.deps.json
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\bin\Debug\net8.0\CartService.Application.dll
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\bin\Debug\net8.0\CartService.Application.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.csproj.AssemblyReference.cache
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.AssemblyInfoInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.AssemblyInfo.cs
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.csproj.CoreCompileInputs.cache
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.sourcelink.json
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.dll
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\refint\CartService.Application.dll
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\CartService.Application.pdb
+D:\LapTrinh\PRM_BOOK\bookbridge-backend\bookbridge-backend\CartService.Application\obj\Debug\net8.0\ref\CartService.Application.dll

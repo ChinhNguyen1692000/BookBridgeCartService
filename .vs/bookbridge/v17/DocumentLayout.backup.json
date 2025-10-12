@@ -1,22 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\",
+  "WorkspaceRootPath": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56868B4A-0404-4AC3-87CC-23A24F74958C}|UserService.Messaging\\UserService.Messaging.csproj|d:\\laptrinh\\prm_book\\bookbridge\\bookbridge\\userservice.messaging\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56868B4A-0404-4AC3-87CC-23A24F74958C}|UserService.Messaging\\UserService.Messaging.csproj|solutionrelative:userservice.messaging\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3C8B19F-11A3-40C6-AE35-6A6DB389EDFA}|src\\Services\\BookService\\BookService.Domain\\BookService.Domain.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3C8B19F-11A3-40C6-AE35-6A6DB389EDFA}|src\\Services\\BookService\\BookService.Domain\\BookService.Domain.csproj|solutionrelative:src\\services\\bookservice\\bookservice.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{410A35ED-15C7-417C-967C-ADAF5575AF69}|UserService.Infrastructure\\UserService.Infrastructure.csproj|d:\\laptrinh\\prm_book\\bookbridge\\bookbridge\\userservice.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{410A35ED-15C7-417C-967C-ADAF5575AF69}|UserService.Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:userservice.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|solutionrelative:cartservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AD336D1-9D23-4C4B-84AB-CD1C39E97879}|UserService.Domain\\UserService.Domain.csproj|d:\\laptrinh\\prm_book\\bookbridge\\bookbridge\\userservice.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AD336D1-9D23-4C4B-84AB-CD1C39E97879}|UserService.Domain\\UserService.Domain.csproj|solutionrelative:userservice.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.application\\service\\cartservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|solutionrelative:cartservice.application\\service\\cartservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2312CE25-DF20-43B5-9C9F-2AFCA0AFD345}|UserService.Application\\UserService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge\\bookbridge\\userservice.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2312CE25-DF20-43B5-9C9F-2AFCA0AFD345}|UserService.Application\\UserService.Application.csproj|solutionrelative:userservice.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|solutionrelative:cartservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.application\\models\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|solutionrelative:cartservice.application\\models\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E79746F6-5FF4-4131-893A-B6A4135667F1}|CartService.Api\\CartService.Api.csproj|solutionrelative:cartservice.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\cartservice.application\\interface\\icartservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00765C77-D12C-41C8-AF40-49287E84A6E0}|CartService.Application\\CartService.Application.csproj|solutionrelative:cartservice.application\\interface\\icartservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD32A1C0-7713-4A49-A64A-E5BEE90028F3}|src\\Services\\OrderService\\OrderService.Api\\OrderService.Api.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD32A1C0-7713-4A49-A64A-E5BEE90028F3}|src\\Services\\OrderService\\OrderService.Api\\OrderService.Api.csproj|solutionrelative:src\\services\\orderservice\\orderservice.api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5E4B68-6B02-4839-816D-0DC54D9DBF16}|src\\Services\\OrderService\\OrderService.Infrastructure\\OrderService.Infrastructure.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.infrastructure\\repositories\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5E4B68-6B02-4839-816D-0DC54D9DBF16}|src\\Services\\OrderService\\OrderService.Infrastructure\\OrderService.Infrastructure.csproj|solutionrelative:src\\services\\orderservice\\orderservice.infrastructure\\repositories\\orderitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5E4B68-6B02-4839-816D-0DC54D9DBF16}|src\\Services\\OrderService\\OrderService.Infrastructure\\OrderService.Infrastructure.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5E4B68-6B02-4839-816D-0DC54D9DBF16}|src\\Services\\OrderService\\OrderService.Infrastructure\\OrderService.Infrastructure.csproj|solutionrelative:src\\services\\orderservice\\orderservice.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.application\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|solutionrelative:src\\services\\orderservice\\orderservice.application\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.application\\models\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|solutionrelative:src\\services\\orderservice\\orderservice.application\\models\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\orderservice\\orderservice.application\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B3BBA0-D35E-475F-BDC2-623D8B320513}|src\\Services\\OrderService\\OrderService.Application\\OrderService.Application.csproj|solutionrelative:src\\services\\orderservice\\orderservice.application\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DFEA353-C5E4-4651-B261-86CB0A4E7A20}|src\\Services\\BookService\\BookService.Api\\BookService.Api.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DFEA353-C5E4-4651-B261-86CB0A4E7A20}|src\\Services\\BookService\\BookService.Api\\BookService.Api.csproj|solutionrelative:src\\services\\bookservice\\bookservice.api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.application\\interface\\ibookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|solutionrelative:src\\services\\bookservice\\bookservice.application\\interface\\ibookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.application\\services\\bookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|solutionrelative:src\\services\\bookservice\\bookservice.application\\services\\bookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACD40E6A-2D8A-455A-90CD-4BAD7BCB07EA}|src\\Services\\BookService\\BookService.Infrastructure\\BookService.Infrastructure.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.infrastructure\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACD40E6A-2D8A-455A-90CD-4BAD7BCB07EA}|src\\Services\\BookService\\BookService.Infrastructure\\BookService.Infrastructure.csproj|solutionrelative:src\\services\\bookservice\\bookservice.infrastructure\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|d:\\laptrinh\\prm_book\\bookbridge-backend\\bookbridge-backend\\src\\services\\bookservice\\bookservice.application\\models\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D66E9B-EEE8-4C55-A76F-EC54C64117B1}|src\\Services\\BookService\\BookService.Application\\BookService.Application.csproj|solutionrelative:src\\services\\bookservice\\bookservice.application\\models\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,55 +102,221 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Messaging\\Class1.cs",
-              "RelativeDocumentMoniker": "UserService.Messaging\\Class1.cs",
-              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Messaging\\Class1.cs",
-              "RelativeToolTip": "UserService.Messaging\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Api\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Api\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Api\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Api\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T01:46:01.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-12T10:46:30.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Infrastructure\\Class1.cs",
-              "RelativeDocumentMoniker": "UserService.Infrastructure\\Class1.cs",
-              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Infrastructure\\Class1.cs",
-              "RelativeToolTip": "UserService.Infrastructure\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ICartServices.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Interface\\ICartServices.cs",
+              "RelativeDocumentMoniker": "CartService.Application\\Interface\\ICartServices.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Interface\\ICartServices.cs",
+              "RelativeToolTip": "CartService.Application\\Interface\\ICartServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T01:45:16.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-12T10:42:05.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "CartService.Api\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\Controllers\\CartController.cs",
+              "RelativeToolTip": "CartService.Api\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T10:41:29.385Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Domain\\Class1.cs",
-              "RelativeDocumentMoniker": "UserService.Domain\\Class1.cs",
-              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Domain\\Class1.cs",
-              "RelativeToolTip": "UserService.Domain\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CartServices.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Service\\CartServices.cs",
+              "RelativeDocumentMoniker": "CartService.Application\\Service\\CartServices.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Service\\CartServices.cs",
+              "RelativeToolTip": "CartService.Application\\Service\\CartServices.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAUwFgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T01:44:58.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-12T10:25:30.938Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Application\\Class1.cs",
-              "RelativeDocumentMoniker": "UserService.Application\\Class1.cs",
-              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge\\bookbridge\\UserService.Application\\Class1.cs",
-              "RelativeToolTip": "UserService.Application\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "CartService.Api\\appsettings.json",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\appsettings.json",
+              "RelativeToolTip": "CartService.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-12T10:23:59.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\Program.cs",
+              "RelativeDocumentMoniker": "CartService.Api\\Program.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Api\\Program.cs",
+              "RelativeToolTip": "CartService.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T01:44:36.918Z",
+              "WhenOpened": "2025-10-12T10:21:55.545Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartDTO.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Models\\CartDTO.cs",
+              "RelativeDocumentMoniker": "CartService.Application\\Models\\CartDTO.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\CartService.Application\\Models\\CartDTO.cs",
+              "RelativeToolTip": "CartService.Application\\Models\\CartDTO.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T09:54:32.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Domain\\entities\\Book.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Domain\\entities\\Book.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Domain\\entities\\Book.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Domain\\entities\\Book.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:08:39.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderItemRepository.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderItemRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderItemRepository.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderItemRepository.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderItemRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T10:48:29.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderRepository.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Infrastructure\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T10:48:12.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderServices.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Services\\OrderServices.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Application\\Services\\OrderServices.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Services\\OrderServices.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Application\\Services\\OrderServices.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T10:47:40.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderItemDTO.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Models\\OrderItemDTO.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Application\\Models\\OrderItemDTO.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Models\\OrderItemDTO.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Application\\Models\\OrderItemDTO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T08:53:42.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Models\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "src\\Services\\OrderService\\OrderService.Application\\Models\\OrderDTO.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\OrderService\\OrderService.Application\\Models\\OrderDTO.cs",
+              "RelativeToolTip": "src\\Services\\OrderService\\OrderService.Application\\Models\\OrderDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwBQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T08:52:54.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IBookServices.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Interface\\IBookServices.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Application\\Interface\\IBookServices.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Interface\\IBookServices.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Application\\Interface\\IBookServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:47:24.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Infrastructure\\Repositories\\BookRepository.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Infrastructure\\Repositories\\BookRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:26:56.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BookServices.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Services\\BookServices.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Application\\Services\\BookServices.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Services\\BookServices.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Application\\Services\\BookServices.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:23:29.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Api\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Api\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Api\\Controllers\\BookController.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Api\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:17:50.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BookDTO.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Models\\BookDTO.cs",
+              "RelativeDocumentMoniker": "src\\Services\\BookService\\BookService.Application\\Models\\BookDTO.cs",
+              "ToolTip": "D:\\LapTrinh\\PRM_BOOK\\bookbridge-backend\\bookbridge-backend\\src\\Services\\BookService\\BookService.Application\\Models\\BookDTO.cs",
+              "RelativeToolTip": "src\\Services\\BookService\\BookService.Application\\Models\\BookDTO.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwEsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:09:34.805Z"
             }
           ]
         },
@@ -135,22 +357,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:7:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:7:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:9:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:8:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }
