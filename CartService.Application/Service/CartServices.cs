@@ -52,7 +52,6 @@ namespace CartService.Application.Service
                 {
                     StoreId = item.StoreId,
                     StoreName = item.StoreName,
-                    StoreImage = item.StoreImage,
                     Items = new List<CartItem>()
                 };
                 cart.Stores.Add(store);

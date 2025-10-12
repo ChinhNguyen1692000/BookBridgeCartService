@@ -14,20 +14,11 @@ namespace CartService.Application.Models
     {
         public string CustomerId { get; set; }  // Mã user, dùng làm key Redis
         public List<BookstoreItem> Stores { get; set; } = new List<BookstoreItem>();
-
-        public decimal TotalAmount
-        {
-            get
-            {
-                return Stores.Sum(store => store.Items.Sum(item => item.TotalPrice));
-            }
-        }
     }
     public class BookstoreItem
     {
         public int StoreId { get; set; }
         public string? StoreName { get; set; }
-        public string? StoreImage { get; set; }
         public List<CartItem> Items { get; set; } = new List<CartItem>();
 
     }
@@ -38,20 +29,17 @@ namespace CartService.Application.Models
         public string? BookImage { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public decimal TotalPrice => UnitPrice * Quantity;
     }
     public class AddItemRequest
     {
         public string CustomerId { get; set; }  // Mã user, dùng làm key Redis
         public int StoreId { get; set; }
         public string? StoreName { get; set; }
-        public string? StoreImage { get; set; }
         public int BookId { get; set; }
         public string? BookTitle { get; set; }
         public string? BookImage { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public decimal TotalPrice => UnitPrice * Quantity;
     }
     public class RemoveItemRequest
     {
