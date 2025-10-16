@@ -13,7 +13,7 @@ namespace CartService.Api.Controllers
             _cartService = cartService;
         }
 
-        [HttpGet("/api/healthz")] // <-- Change: Explicitly set the absolute path
+        [HttpGet("healthz")] // <-- Change: Explicitly set the absolute path
         public IActionResult HealthCheck() => Ok("Healthy");
 
         [HttpGet("{customerId}")]
