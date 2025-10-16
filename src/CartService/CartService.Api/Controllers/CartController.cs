@@ -3,7 +3,9 @@ using CartService.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CartService.Api.Controllers
-{
+{   
+    [ApiController]
+    [Route("api/cart")]
     public class CartController : Controller
     {
         private readonly ICartServices _cartService;
