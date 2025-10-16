@@ -49,6 +49,13 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     }
 });
 
+// 6. Configure Kestrel to use Render's provided PORT
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(int.Parse(port));
+});
+
 
 var app = builder.Build();
 

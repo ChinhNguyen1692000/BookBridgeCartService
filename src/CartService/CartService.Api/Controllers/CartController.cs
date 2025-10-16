@@ -13,6 +13,9 @@ namespace CartService.Api.Controllers
             _cartService = cartService;
         }
 
+        [HttpGet("/api/healthz")] // <-- Change: Explicitly set the absolute path
+        public IActionResult HealthCheck() => Ok("Healthy");
+
         [HttpGet("{customerId}")]
         public async Task<IActionResult> GetCart(string customerId)
         {
