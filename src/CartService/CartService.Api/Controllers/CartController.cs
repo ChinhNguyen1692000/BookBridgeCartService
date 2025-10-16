@@ -23,14 +23,14 @@ namespace CartService.Api.Controllers
             return Ok(cart);
         }
 
-        [HttpPost("/items")]
+        [HttpPost("items")]
         public async Task<IActionResult> AddItem([FromBody] AddItemRequest item)
         {
             var updatedCart = await _cartService.AddItemAsync(item);
             return Ok(updatedCart);
         }
 
-        [HttpDelete("{customerId}/items/")]
+        [HttpDelete("{customerId}/items")]
         public async Task<IActionResult> RemoveItem(RemoveItemRequest item)
         {
             var updatedCart = await _cartService.RemoveItemAsync(item);
