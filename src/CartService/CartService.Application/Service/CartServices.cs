@@ -61,7 +61,7 @@ namespace CartService.Application.Service
             var existItem = store.Items.FirstOrDefault(i => i.BookId == item.BookId);
             if (existItem != null)
             {
-                existItem.Quantity += item.Quantity;
+                existItem.Quantity = item.Quantity;
             }
             else
             {
