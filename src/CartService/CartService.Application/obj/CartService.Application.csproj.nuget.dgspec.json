@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {}
+    "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {}
   },
   "projects": {
-    "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {
+    "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj",
+        "projectUniqueName": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj",
         "projectName": "CartService.Application",
-        "projectPath": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj",
+        "projectPath": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj",
         "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-        "outputPath": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\obj\\",
+        "outputPath": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"

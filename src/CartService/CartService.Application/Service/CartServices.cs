@@ -98,7 +98,7 @@ namespace CartService.Application.Service
             var data = JsonSerializer.Serialize(cart);
 
             // ⏱️ Tự xóa sau 1 phút
-            await _redisDb.StringSetAsync(GetKey(cart.CustomerId), data, TimeSpan.FromMinutes(1));
+            await _redisDb.StringSetAsync(GetKey(cart.CustomerId), data, TimeSpan.FromMinutes(15));
 
             // 🕓 Tự xóa sau 2 tuần 
             // await _redisDb.StringSetAsync(GetKey(cart.CustomerId), data, TimeSpan.FromDays(14));

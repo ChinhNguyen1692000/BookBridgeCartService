@@ -712,11 +712,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Api\\CartService.Api.csproj",
+      "projectUniqueName": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Api\\CartService.Api.csproj",
       "projectName": "CartService.Api",
-      "projectPath": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Api\\CartService.Api.csproj",
+      "projectPath": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Api\\CartService.Api.csproj",
       "packagesPath": "C:\\Users\\Chinh\\.nuget\\packages\\",
-      "outputPath": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Api\\obj\\",
+      "outputPath": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -731,8 +731,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {
-              "projectPath": "E:\\My githhub repo(UserSerivce)\\bookbridge-backend\\src\\CartService\\CartService.Application\\CartService.Application.csproj"
+            "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj": {
+              "projectPath": "E:\\My githhub repo(UserSerivce)\\BookBridgeCartService\\src\\CartService\\CartService.Application\\CartService.Application.csproj"
             }
           }
         }
