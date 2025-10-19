@@ -3,7 +3,7 @@ using CartService.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CartService.Api.Controllers
-{   
+{
     [ApiController]
     [Route("api/cart")]
     public class CartController : Controller
@@ -32,9 +32,16 @@ namespace CartService.Api.Controllers
             return Ok(updatedCart);
         }
 
-        [HttpDelete("{customerId}/items")]
-        public async Task<IActionResult> RemoveItem(RemoveItemRequest item)
+        [HttpDelete("{customerId}/items/{storeId}/{bookId}")]
+        public async Task<IActionResult> RemoveItem(string customerId, int storeId, int bookId)
         {
+            var item = new RemoveItemRequest
+            {
+                CustomerId = customerId,
+                StoreId = storeId,
+                BookId = bookId
+            };
+
             var updatedCart = await _cartService.RemoveItemAsync(item);
             return Ok(updatedCart);
         }

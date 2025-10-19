@@ -82,9 +82,24 @@ namespace CartService.Application.Service
         public async Task<Cart> RemoveItemAsync(RemoveItemRequest item)
         {
             var cart = await GetCartAsync(item.CustomerId);
-            var existItem = cart.Stores.FirstOrDefault(s => s.StoreId == item.StoreId).Items.FirstOrDefault(i => i.BookId == item.BookId);
-            var a = cart.Stores.FirstOrDefault(s => s.StoreId == item.StoreId).Items.Remove(existItem);
-            await SaveCartAsync(cart);
+
+            var store = cart.Stores.FirstOrDefault(s => s.StoreId == item.StoreId);
+            if (store != null)
+            {
+                var existItem = store.Items.FirstOrDefault(i => i.BookId == item.BookId);
+                if (existItem != null)
+                {
+                    store.Items.Remove(existItem);
+
+                    if (!store.Items.Any())
+                    {
+                        cart.Stores.Remove(store);
+                    }
+
+                    await SaveCartAsync(cart);
+                }
+            }
+
             return cart;
         }
 
