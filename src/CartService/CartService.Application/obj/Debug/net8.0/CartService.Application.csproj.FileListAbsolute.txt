@@ -24,3 +24,16 @@ E:\My githhub repo(UserSerivce)\bookbridge-backend\src\CartService\CartService.A
 E:\My githhub repo(UserSerivce)\bookbridge-backend\src\CartService\CartService.Application\obj\Debug\net8.0\refint\CartService.Application.dll
 E:\My githhub repo(UserSerivce)\bookbridge-backend\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.pdb
 E:\My githhub repo(UserSerivce)\bookbridge-backend\src\CartService\CartService.Application\obj\Debug\net8.0\ref\CartService.Application.dll
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\bin\Debug\net8.0\CartService.Application.deps.json
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\bin\Debug\net8.0\CartService.Application.dll
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\bin\Debug\net8.0\CartService.Application.pdb
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.csproj.AssemblyReference.cache
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.AssemblyInfoInputs.cache
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.AssemblyInfo.cs
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.csproj.CoreCompileInputs.cache
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.sourcelink.json
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.dll
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\refint\CartService.Application.dll
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\CartService.Application.pdb
+E:\My githhub repo(UserSerivce)\BookBridgeCartService\src\CartService\CartService.Application\obj\Debug\net8.0\ref\CartService.Application.dll
