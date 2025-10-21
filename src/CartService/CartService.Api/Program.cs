@@ -11,29 +11,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//-------------------------REDIS
-//var redisConnectionString = builder.Configuration.GetConnectionString("Redis");
-
-// 🔹 Đăng ký Redis Multiplexer vào DI container
-builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
-{
-    return ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis"));
-});
-
-
 
 builder.Services.AddScoped<ICartServices, CartServices>();
 
 
 // 4. Redis
-// var redisConnection = configuration.GetConnectionString("Redis");
-// builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
-// builder.Services.AddScoped<ICacheService, RedisCacheService>();
-var redisConnection = builder.Configuration.GetConnectionString("Redis") ?? Environment.GetEnvironmentVariable("ConnectionStrings__Redis");
+var redisConnection = builder.Configuration.GetConnectionString("Redis")
+                      ?? Environment.GetEnvironmentVariable("ConnectionStrings__Redis")
+                      ?? ""; // Cung cấp một giá trị mặc định rỗng
 
 if (redisConnection.StartsWith("redis://"))
 {
     redisConnection = redisConnection.Replace("redis://", "");
+}
+
+// Thêm kiểm tra null/rỗng trước khi Connect
+if (string.IsNullOrEmpty(redisConnection))
+{
+    // Hoặc ghi log và thoát nếu kết nối Redis là bắt buộc
+    throw new InvalidOperationException("Redis connection string is missing.");
 }
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
@@ -66,7 +62,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
