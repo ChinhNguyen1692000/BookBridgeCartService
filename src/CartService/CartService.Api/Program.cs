@@ -64,9 +64,9 @@ using (var scope = app.Services.CreateScope())
 {
     var redis = scope.ServiceProvider.GetRequiredService<IConnectionMultiplexer>();
     if (redis.IsConnected)
-        Console.WriteLine("✅ Redis connected successfully.");
+        Console.WriteLine(" Redis connected successfully.");
     else
-        Console.WriteLine("⚠️ Redis not connected.");
+        Console.WriteLine(" Redis not connected.");
 }
 
 // Configure the HTTP request pipeline.
