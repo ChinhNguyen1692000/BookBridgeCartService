@@ -16,27 +16,28 @@ builder.Services.AddScoped<ICartServices, CartServices>();
 
 
 // 4. Redis
-var redisConnection = builder.Configuration.GetConnectionString("Redis")
-                      ?? Environment.GetEnvironmentVariable("ConnectionStrings__Redis")
-                      ?? ""; // Cung cấp một giá trị mặc định rỗng
+var redisConnection = builder.Configuration.GetConnectionString("Redis") ?? Environment.GetEnvironmentVariable("ConnectionStrings__Redis");
 
-if (redisConnection.StartsWith("redis://"))
+if (!string.IsNullOrEmpty(redisConnection) && redisConnection.StartsWith("redis://"))
 {
     redisConnection = redisConnection.Replace("redis://", "");
 }
-
-// Thêm kiểm tra null/rỗng trước khi Connect
-if (string.IsNullOrEmpty(redisConnection))
+else if (string.IsNullOrEmpty(redisConnection))
 {
-    // Hoặc ghi log và thoát nếu kết nối Redis là bắt buộc
-    throw new InvalidOperationException("Redis connection string is missing.");
+    Console.WriteLine(" Redis connection string is null or empty!");
 }
+
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 {
     try
     {
-        return ConnectionMultiplexer.Connect(redisConnection);
+        var config = ConfigurationOptions.Parse(redisConnection, true);
+        config.AbortOnConnectFail = false;
+        config.ConnectRetry = 3;
+        config.ConnectTimeout = 5000;
+        config.SyncTimeout = 5000;
+        return ConnectionMultiplexer.Connect(config);
     }
     catch (Exception ex)
     {
@@ -44,6 +45,8 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
         throw;
     }
 });
+
+
 
 // 6. Configure Kestrel to use Render's provided PORT
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
@@ -62,7 +65,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// app.UseHttpsRedirection();
+app.MapGet("/health", () => Results.Ok("Healthy"));
 
 app.UseAuthorization();
 
