@@ -27,7 +27,6 @@ else if (string.IsNullOrEmpty(redisConnection))
     Console.WriteLine(" Redis connection string is null or empty!");
 }
 
-
 builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 {
     try
@@ -41,22 +40,34 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"❌ Redis connection failed: {ex.Message}");
+        Console.WriteLine($" Redis connection failed: {ex.Message}");
         throw;
     }
 });
 
 
 
-// 6. Configure Kestrel to use Render's provided PORT
+// 5. Configure Kestrel to use Render's provided PORT
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(int.Parse(port));
 });
 
+builder.Services.AddHttpsRedirection(options => options.HttpsPort = null);
+
 
 var app = builder.Build();
+
+// Check Redis connection when startup
+using (var scope = app.Services.CreateScope())
+{
+    var redis = scope.ServiceProvider.GetRequiredService<IConnectionMultiplexer>();
+    if (redis.IsConnected)
+        Console.WriteLine("✅ Redis connected successfully.");
+    else
+        Console.WriteLine("⚠️ Redis not connected.");
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
